@@ -1,1 +1,23 @@
-GET http://localhost:3082/getUsers
+GET http://localhost:3083/getUsers
+
+####
+POST http://localhost:3083/createUsers
+Content-Type: application/json
+
+
+{
+    "firstName":"Carlo",
+    "lastName": "Atripla",
+    "email":"carloatrica@gmail.com",
+    "password":"ciao",
+    "age":"30"
+}
+
+####
+POST http://localhost:3083/login
+Content-Type: application/json
+
+{
+    "email":"carloatrica@gmail.com",
+    "password":"ciao"
+}

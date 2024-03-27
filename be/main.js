@@ -1,22 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const logger = require("./middlewares/logger");
 require("dotenv").config();
 
-const PORT = 3082;
+const PORT = 3083;
 
 const app = express();
 
 const usersRoute = require("./Routes/users");
+const loginRoute = require("./Routes/login");
 
 app.use(express.json());
 
+app.use(logger);
 app.use("/", usersRoute);
-// app.get("/", (request, response) => {
-//   response.status(200).send({
-//     name: "FER",
-//     isOnline: true,
-//   });
-// });
+app.use("/", loginRoute);
 
 mongoose
   .connect(process.env.MONGODB_URL)
