@@ -6,12 +6,17 @@ const PORT = 3082;
 
 const app = express();
 
-app.get("/", (request, response) => {
-  response.status(200).send({
-    name: "FER",
-    isOnline: true,
-  });
-});
+const usersRoute = require("./Routes/users");
+
+app.use(express.json());
+
+app.use("/", usersRoute);
+// app.get("/", (request, response) => {
+//   response.status(200).send({
+//     name: "FER",
+//     isOnline: true,
+//   });
+// });
 
 mongoose
   .connect(process.env.MONGODB_URL)

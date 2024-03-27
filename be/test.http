@@ -1,1 +1,1 @@
-GET http://localhost:3082
+GET http://localhost:3082/getUsers
