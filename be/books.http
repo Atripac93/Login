@@ -1,0 +1,10 @@
+POST http://localhost:3083/books/create 
+Content-Type: application/json
+
+{
+    "author": "Fede",
+    "title": "titolo del libro 1",
+    "price": 20,
+    "isFeatured": false,
+    "description":"lorem ipsum dolor"
+}
