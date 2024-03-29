@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [formData, setFormData] = useState({});
-  console.log(formData);
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [error, setError] = useState(null);
 
   const onChangeInput = (e) => {
     const { name, value } = e.target;
@@ -11,13 +13,34 @@ const Login = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const resp = await fetch("http://localhost:3083/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (resp.ok) {
+        console.log("Login success");
+        let data = await resp.json();
+        localStorage.setItem("auth", JSON.stringify(data.token));
+        navigate("/home");
+        return data;
+      } else {
+        throw new Error("Login failed");
+      }
+    } catch (err) {
+      console.error("Error during login:");
+      setError("Credenziali non valide. Riprova.");
+    }
   };
 
   return (
     <div className="container">
       <div className="row d-flex justify-content-center">
         <div className="col-md-6">
-          <h2 className="text-center text-dark mt-5">Epibooks Login</h2>
           <div className="card my-5">
             <form
               onSubmit={onSubmit}
@@ -62,11 +85,17 @@ const Login = () => {
                 </button>
               </div>
 
+              {error && (
+                <div className="alert alert-danger" role="alert">
+                  {error}
+                </div>
+              )}
+
               <div
                 id="emailHelp"
                 className="form-text text-center mb-5 text-dark"
               >
-                Non sei registrato?
+                Non sei registrato?{" "}
                 <a href="#" className="text-dark fw-bold ms-1">
                   Registrati ora!
                 </a>

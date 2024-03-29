@@ -14,7 +14,6 @@ const NavigationBar = () => {
                 height="50"
                 className="d-inline-block align-text-top rounded-circle me-3"
               />
-              Epibooks
             </a>
           </div>
           <div className="col-9 d-flex justify-content-end align-items-center">
