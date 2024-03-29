@@ -31,7 +31,7 @@ const Login = () => {
       } else {
         throw new Error("Login failed");
       }
-    } catch (err) {
+    } catch (e) {
       console.error("Error during login:");
       setError("Credenziali non valide. Riprova.");
     }
