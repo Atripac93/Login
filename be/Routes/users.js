@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const userModel = require("../Modules/users");
 const bcrypt = require("bcrypt");
+// const verifed = require("../middlewares/verifyToken");
 router.get("/getUsers", async (request, response) => {
   try {
     const users = await userModel.find();

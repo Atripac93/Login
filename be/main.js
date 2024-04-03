@@ -4,7 +4,7 @@ const logger = require("./middlewares/logger");
 require("dotenv").config();
 const cors = require("cors");
 
-const PORT = 3083;
+const PORT = 3084;
 
 const app = express();
 
