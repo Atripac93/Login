@@ -1,11 +1,12 @@
 import React from "react";
 import MainLayout from "../layouts/MainLayout";
 import MainContent from "../components/homePage/MainContent";
-import useSession from "../hooks/useSession";
+import { jwtDecode } from "jwt-decode";
 
 const Home = () => {
-  const loggedUser = useSession();
-  console.log(loggedUser);
+  const session = JSON.parse(localStorage.getItem("auth"));
+  const decodedSession = jwtDecode(session);
+
   return (
     <>
       <MainLayout>

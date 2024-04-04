@@ -19,7 +19,7 @@ const BookSchema = new mongoose.Schema(
     cover: {
       type: String,
       required: false,
-      default: "https://picsum.photos/200/300",
+      default: "https://picsum.photos/600/400",
     },
     price: {
       type: Number,
