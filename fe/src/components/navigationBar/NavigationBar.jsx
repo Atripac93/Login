@@ -15,7 +15,7 @@ const NavigationBar = () => {
             <div className="col-3">
               <a className="navbar-brand d-flex align-items-center" href="#">
                 <img
-                  src="https://picsum.photos/340/340"
+                  src="https://i0.wp.com/scuolainsoffitta.com/wp-content/uploads/2017/02/come-organizzare-una-libreria.jpg?w=700&ssl=1"
                   alt="Logo"
                   width="50"
                   height="50"

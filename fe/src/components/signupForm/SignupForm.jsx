@@ -35,7 +35,7 @@ const SignupForm = ({ toggleForm }) => {
     <form onSubmit={onSubmit} className="card-body cardbody-color p-lg-5">
       <div className="text-center">
         <img
-          src="https://picsum.photos/340/340"
+          src="https://i0.wp.com/scuolainsoffitta.com/wp-content/uploads/2017/02/come-organizzare-una-libreria.jpg?w=700&ssl=1"
           className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
           width="200px"
           alt="profile"

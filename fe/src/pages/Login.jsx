@@ -12,7 +12,9 @@ const Login = () => {
     <div className="container">
       <div className="row d-flex justify-content-center">
         <div className="col-md-5 col-lg-5">
-          <h2 className="text-center text-dark mt-5">Login</h2>
+          <h2 className="text-center text-dark mt-5">
+            Benvenuto nella tua libreria!
+          </h2>
           <div className="card my-5">
             {showSignupForm ? (
               <SignupForm toggleForm={toggleForm} />
