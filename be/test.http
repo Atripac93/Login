@@ -8,8 +8,8 @@ Content-Type: application/json
 {
     "firstName":"Carlo",
     "lastName": "Atripla",
-    "email":"carloatrica@gmail.com",
-    "password":"ciao",
+    "email":"carloatricas@gmail.com",
+    "password":"ciaos",
     "age":"30"
 }
 
@@ -18,6 +18,6 @@ POST http://localhost:3084/login
 Content-Type: application/json
 
 {
-    "email":"carloatrica@gmail.com",
-    "password":"ciao"
+    "email":"carloatricas@gmail.com",
+    "password":"ciaos"
 }
