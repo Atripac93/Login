@@ -37,3 +37,5 @@ export const allBooks = (state) => state.booksData.books;
 export const isBooksLoading = (state) => state.booksData.isLoading;
 export const booksError = (state) => state.booksData.error;
 export default booksSlice.reducer;
+
+//Gestione dei libri col metodo Redux

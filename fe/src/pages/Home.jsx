@@ -17,3 +17,6 @@ const Home = () => {
 };
 
 export default Home;
+
+//Pagina Home all´interno della quale mi sono importato MainLayout e MainContent affinche´ li possa trasferire
+//anche in altre pagine qualora ne abbia bisogno. Nel MainContent ho inserito l´intera struttura dell`homePage

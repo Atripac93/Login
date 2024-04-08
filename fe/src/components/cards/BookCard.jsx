@@ -13,3 +13,4 @@ const BookCard = ({ title, category, img }) => {
   );
 };
 export default BookCard;
+//La struttura delle cards

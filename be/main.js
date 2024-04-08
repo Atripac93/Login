@@ -40,3 +40,4 @@ db.once("open", () => {
 app.listen(PORT, () =>
   console.log(`server collegato alla porta numero ${PORT}`)
 );
+//Qui e´ dove gestisco tutte le rotte del BE  e dove collego la porta per BE

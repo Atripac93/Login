@@ -51,3 +51,5 @@ books.post("/books/create", async (request, response) => {
 });
 
 module.exports = books;
+// In questa pagina  ho creato la struttura dei per aggiungere i libri oltre che l´impaginazione,
+//gestendo gli errori e quant´altro

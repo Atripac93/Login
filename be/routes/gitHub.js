@@ -60,3 +60,6 @@ gitHub.get("/success", (request, response) => {
 });
 
 module.exports = gitHub;
+
+//Pagina per potersi collegare e fare il login con GitHub. Il bottone per accedervi lo troviamo nella pag.
+//FE di LoginForm
